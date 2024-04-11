@@ -19,7 +19,7 @@ button:focus {
 a {
   text-decoration: none;
   color: black;
-  transition: 0.3s ease;
+  @include transition();
 }
 
 ul {
@@ -45,7 +45,7 @@ h3 {
   background-color: transparent;
   border-radius: $radius;
   line-height: 1em;
-  transition: all ease-in-out 0.3s;
+  @include transition();
 
   &.c1 {
     color: $color-1;
@@ -93,7 +93,7 @@ header {
         margin-right: $large-value;
         cursor: pointer;
         font-size: 20px;
-        transition: all ease-in-out 0.3s;
+        @include transition();
         a {
           color: #ffffff;
         }
@@ -115,7 +115,7 @@ header {
 
       .logo {
         img {
-          transition: all ease-in-out 0.3s;
+          @include transition();
           width: 50px;
           height: auto;
           &:hover {
@@ -321,7 +321,7 @@ section {
       background-color: $color-1;
       padding: $small-value;
       position: relative;
-      transition: all ease-in-out 0.3s;
+      @include transition();
       position: relative;
       border-radius: $radius;
 
@@ -339,7 +339,7 @@ section {
         object-fit: cover;
         width: 100%;
         height: 280px;
-        transition: all ease-in-out 0.3s;
+        @include transition();
       }
 
       .content {
@@ -413,7 +413,7 @@ footer {
 
     .links {
       a {
-        transition: 0.3s ease;
+        @include transition();
         margin-right: $small-value;
 
         &:last-child {
@@ -424,7 +424,7 @@ footer {
 
     i {
       font-size: 30px;
-      transition: 0.3s ease;
+      @include transition();
 
       &:hover {
         opacity: 0.5;
