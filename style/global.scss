@@ -93,9 +93,9 @@ header {
         margin-right: $large-value;
         cursor: pointer;
         font-size: 20px;
-        @include transition();
         a {
           color: #ffffff;
+          @include transition();
         }
 
         &:last-child {
@@ -108,7 +108,10 @@ header {
 
         &:hover {
           &:not(.left) {
-            border-bottom: 2px solid $color-2;
+            a:not(.button) {
+              color: $color-2;
+            }
+            
           }
         }
       }
@@ -144,12 +147,12 @@ section {
       h1 {
         text-align: center;
         max-width: 60%;
-        font-size: 26px;
+        font-size: 40px;
         color: $color-1;
-        line-height: 1.5em;
+        line-height: 1.2em;
 
         strong {
-          font-size: 40px;
+          font-size: 30px;
           color: $color-2;
         }
       }
@@ -174,6 +177,11 @@ section {
 
   .presentation {
     padding-top: $large-value;
+
+    span {
+      font-size: 20px;
+      line-height: 1.4em;
+    }
   }
 }
 
@@ -315,9 +323,11 @@ section {
     justify-content: space-between;
     align-items: center;
     margin-top: $large-value;
+    flex-wrap: wrap;
 
     .projet {
-      width: 45%;
+      width: 30%;
+      margin-bottom: $large-value;
       background-color: $color-1;
       padding: $small-value;
       position: relative;
@@ -328,9 +338,8 @@ section {
       figure {
         overflow: hidden;
         width: 100%;
-        height: 280px;
+        height: 200px;
         margin: 0;
-
         $radiusFigure: calc($radius - $small-value);
         border-radius: $radiusFigure $radiusFigure 0 0 ;
       }
@@ -338,7 +347,7 @@ section {
       img {
         object-fit: cover;
         width: 100%;
-        height: 280px;
+        height: 200px;
         @include transition();
       }
 
@@ -349,6 +358,7 @@ section {
 
         h3 {
           margin-bottom: $small-value;
+          margin-top: $small-value;
         }
 
         span {
@@ -367,6 +377,14 @@ section {
         }
       }
     }
+  }
+
+  .button {
+    margin-top: $large-value;
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
