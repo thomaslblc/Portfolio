@@ -31,7 +31,6 @@ ul {
 h2 {
   margin: 0;
   padding: 20px;
-  letter-spacing: 2px;
   font-family: $ff-title;
   font-size: 26px;
 }
@@ -294,6 +293,13 @@ section {
       }
     }
 
+    img {
+      max-height: 50px;
+      max-width: 120px;
+      margin: 0 $small-value;
+      margin-bottom: $small-value;
+    }
+
     .logos {
       display: flex;
       flex-wrap: wrap;
@@ -393,28 +399,19 @@ section {
 
   h2 {
     color: $color-1;
+    margin-bottom: $large-value;
   }
 
-  form {
+  .button {
     display: flex;
-    flex-direction: column;
-    max-width: 50%;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
     margin-left: auto;
-    margin-top: $large-value;
     margin-right: auto;
 
-    input {
-      margin-bottom: $small-value;
-      padding: $small-value * 0.7;
-      border-radius: $radius;
-      border: 2px solid $color-1;
-    }
-
-    textarea {
-      border-radius: $radius;
-      border: 2px solid $color-1;
-      margin-bottom: $large-value;
-      padding: $small-value * 0.7;
+    i {
+      margin-left: 20px;
     }
   }
 }
