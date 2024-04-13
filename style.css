@@ -114,7 +114,7 @@ ul {
 
 h2 {
   margin: 0;
-  padding: 20px;
+  padding-bottom: 20px;
   font-family: "Chelsea Basis", sans-serif;
   font-size: 26px;
 }
@@ -601,6 +601,7 @@ section {
   justify-content: space-between;
   overflow: scroll;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 .projets .projets-content .popupContainer .wrapper .popupContent .popupClose {
   font-size: 26px;
@@ -680,7 +681,7 @@ section {
 footer {
   background-color: #154c79;
   color: #ffffff;
-  padding: 3rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 footer .footer-content {

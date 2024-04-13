@@ -30,7 +30,7 @@ ul {
 
 h2 {
   margin: 0;
-  padding: 20px;
+  padding-bottom: 20px;
   font-family: $ff-title;
   font-size: 26px;
 
@@ -551,6 +551,7 @@ section {
           justify-content: space-between;
           overflow: scroll;
           overflow-x: hidden;
+          overflow-y: auto;
 
           .popupClose {
             font-size: 26px;
@@ -647,7 +648,7 @@ section {
 footer {
   background-color: $color-1;
   color: #ffffff;
-  padding: $large-value 0;
+  padding: $medium-value 0;
   text-align: center;
 
   .footer-content {
