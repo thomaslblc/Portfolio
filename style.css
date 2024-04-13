@@ -118,6 +118,12 @@ h2 {
   font-family: "Chelsea Basis", sans-serif;
   font-size: 26px;
 }
+@media (max-width: 480px) {
+  h2 {
+    padding: 20px 0;
+    font-size: 22px;
+  }
+}
 
 h3 {
   font-size: 26px;
@@ -152,6 +158,11 @@ header {
   top: 0;
   z-index: 3;
 }
+@media (max-width: 640px) {
+  header {
+    position: relative;
+  }
+}
 
 .navbar {
   background-color: #154c79;
@@ -170,6 +181,11 @@ header {
   cursor: pointer;
   font-size: 20px;
 }
+@media (max-width: 640px) {
+  .navbar .navbar-content ul li {
+    display: none;
+  }
+}
 .navbar .navbar-content ul li a {
   color: #ffffff;
   transition: all 150ms ease-in-out;
@@ -179,6 +195,12 @@ header {
 }
 .navbar .navbar-content ul li.left {
   margin-right: auto;
+}
+@media (max-width: 640px) {
+  .navbar .navbar-content ul li.left {
+    display: flex;
+    margin-left: auto;
+  }
 }
 .navbar .navbar-content ul li:hover:not(.left) a:not(.button) {
   color: #91dae8;
@@ -201,21 +223,44 @@ section {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 960px) {
+  .hdp .banner-content {
+    flex-direction: column;
+  }
+}
 .hdp .banner-content div {
   width: 49%;
   display: flex;
   justify-content: center;
 }
+@media (max-width: 960px) {
+  .hdp .banner-content div {
+    width: 100%;
+  }
+}
 .hdp .banner-content div h1 {
   text-align: center;
-  max-width: 60%;
+  max-width: 70%;
   font-size: 40px;
   color: #154c79;
   line-height: 1.2em;
 }
+@media (max-width: 960px) {
+  .hdp .banner-content div h1 {
+    max-width: 100%;
+  }
+}
 .hdp .banner-content div h1 strong {
   font-size: 30px;
   color: #91dae8;
+}
+@media (max-width: 480px) {
+  .hdp .banner-content div h1 {
+    font-size: 30px;
+  }
+  .hdp .banner-content div h1 strong {
+    font-size: 22px;
+  }
 }
 .hdp .banner-content figure {
   width: 200px;
@@ -227,12 +272,27 @@ section {
   align-items: center;
   border: 5px solid #154c79;
 }
+@media (max-width: 480px) {
+  .hdp .banner-content figure {
+    display: none;
+  }
+}
 .hdp .banner-content figure img {
   width: 300px;
   object-fit: cover;
 }
 .hdp .presentation {
   padding-top: 3rem;
+}
+@media (max-width: 640px) {
+  .hdp .presentation {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hdp .presentation {
+    padding-top: 1rem;
+  }
 }
 .hdp .presentation span {
   font-size: 20px;
@@ -249,6 +309,14 @@ section {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 960px) {
+  .cursus .cursus-content {
+    flex-direction: column;
+  }
+  .cursus .cursus-content .formations {
+    margin-bottom: 3rem;
+  }
+}
 .cursus .cursus-content div {
   width: 49%;
   align-items: center;
@@ -256,12 +324,22 @@ section {
   justify-content: start;
   flex-direction: column;
 }
+@media (max-width: 960px) {
+  .cursus .cursus-content div {
+    width: 100%;
+  }
+}
 .cursus .cursus-content div .table {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .cursus .cursus-content div .table {
+    margin-top: 1rem;
+  }
 }
 .cursus .cursus-content div .table .date {
   font-weight: bold;
@@ -272,6 +350,11 @@ section {
   display: flex;
   height: 100%;
   justify-content: start;
+}
+@media (max-width: 480px) {
+  .cursus .cursus-content div .table .date {
+    font-size: 20px;
+  }
 }
 .cursus .cursus-content div .table .table-content {
   display: flex;
@@ -287,10 +370,15 @@ section {
   position: absolute;
   content: "";
   width: 30px;
-  height: 4px;
+  height: 2px;
   background-color: #154c79;
-  top: 10px;
+  top: 12px;
   left: -45px;
+}
+@media (max-width: 1280px) {
+  .cursus .cursus-content div .table .table-content span:before {
+    display: none;
+  }
 }
 .cursus .cursus-content div .table .table-content p {
   margin: 0;
@@ -301,6 +389,17 @@ section {
 .cursus .cursus-content div .table .table-content p.sub {
   font-size: 16px;
   opacity: 0.8;
+}
+@media (max-width: 480px) {
+  .cursus .cursus-content div .table {
+    display: flex;
+    flex-direction: column;
+  }
+  .cursus .cursus-content div .table .table-content span,
+  .cursus .cursus-content div .table .table-content p {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 .competences {
@@ -318,6 +417,12 @@ section {
   gap: 1rem;
   margin-top: 3rem;
 }
+@media (max-width: 960px) {
+  .competences .competences-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .competences .competences-content .front,
 .competences .competences-content .back,
 .competences .competences-content .tools {
@@ -329,6 +434,13 @@ section {
   border-radius: 25px;
   padding: 2rem;
 }
+@media (max-width: 960px) {
+  .competences .competences-content .front,
+  .competences .competences-content .back,
+  .competences .competences-content .tools {
+    flex-direction: column-reverse;
+  }
+}
 .competences .competences-content .front h3,
 .competences .competences-content .back h3,
 .competences .competences-content .tools h3 {
@@ -337,9 +449,17 @@ section {
   font-size: 20px;
   color: #154c79;
 }
+@media (max-width: 960px) {
+  .competences .competences-content .front h3,
+  .competences .competences-content .back h3,
+  .competences .competences-content .tools h3 {
+    margin-bottom: 2rem;
+    margin-top: 0;
+  }
+}
 .competences .competences-content img {
   max-height: 50px;
-  max-width: 120px;
+  width: auto;
   margin: 0 1rem;
   margin-bottom: 1rem;
 }
@@ -380,12 +500,30 @@ section {
   position: relative;
   border-radius: 25px;
 }
+@media (max-width: 1280px) {
+  .projets .projets-content .projet {
+    width: 48%;
+  }
+}
+@media (max-width: 640px) {
+  .projets .projets-content .projet {
+    width: 100%;
+  }
+}
 .projets .projets-content .projet figure {
   overflow: hidden;
   width: 100%;
   height: 200px;
   margin: 0;
   border-radius: calc(25px - 1rem) calc(25px - 1rem) 0 0;
+}
+@media (max-width: 480px) {
+  .projets .projets-content .projet figure {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .projets .projets-content .projet img {
   object-fit: cover;
@@ -397,6 +535,14 @@ section {
   color: #ffffff;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 480px) {
+  .projets .projets-content .projet .content h3 {
+    font-size: 18px;
+  }
+  .projets .projets-content .projet .content span {
+    font-size: 16px;
+  }
 }
 .projets .projets-content .projet .content h3 {
   margin-bottom: 1rem;
@@ -439,6 +585,11 @@ section {
 }
 .contact .button i {
   margin-left: 20px;
+}
+@media (max-width: 480px) {
+  .contact .button i {
+    display: none;
+  }
 }
 
 footer {
