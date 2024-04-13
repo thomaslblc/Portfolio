@@ -441,6 +441,7 @@ section {
       @include transition();
       position: relative;
       border-radius: $radius;
+      z-index: 2;
 
       @include responsive(large-screen) {
         width: 48%;
@@ -505,6 +506,61 @@ section {
 
         img {
           transform: scale(1.05);
+        }
+      }
+    }
+    .popupContainer {
+      position: fixed;
+      z-index: 50;
+      background-color: rgba($body-color, .85);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .popupCover {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+          z-index: 2;
+        }
+
+        .popupContent {
+          position: relative;
+          z-index: 3;
+          background-color: #ffffff;
+          width: 50%;
+          height: 50%;
+          padding: $large-value;
+          border-radius: $radius;
+
+          .popupClose {
+            font-size: 35px;
+            color: rgba($body-color, 0.6);
+            top: $large-value;
+            right: $large-value;
+            cursor: pointer;
+            position: absolute;
+            z-index: 5;
+            @include transition();
+
+            &:hover {
+              color: rgba($color-1, 1);
+            }
+          }
         }
       }
     }

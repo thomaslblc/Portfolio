@@ -499,6 +499,7 @@ section {
   transition: all 150ms ease-in-out;
   position: relative;
   border-radius: 25px;
+  z-index: 2;
 }
 @media (max-width: 1280px) {
   .projets .projets-content .projet {
@@ -559,6 +560,55 @@ section {
 }
 .projets .projets-content .projet:hover img {
   transform: scale(1.05);
+}
+.projets .projets-content .popupContainer {
+  position: fixed;
+  z-index: 50;
+  background-color: rgba(39, 41, 70, 0.85);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.projets .projets-content .popupContainer.active {
+  display: block;
+}
+.projets .projets-content .popupContainer .wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.projets .projets-content .popupContainer .wrapper .popupCover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent {
+  position: relative;
+  z-index: 3;
+  background-color: #ffffff;
+  width: 50%;
+  height: 50%;
+  padding: 3rem;
+  border-radius: 25px;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupClose {
+  font-size: 35px;
+  color: rgba(39, 41, 70, 0.6);
+  top: 3rem;
+  right: 3rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
+  transition: all 150ms ease-in-out;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupClose:hover {
+  color: #154c79;
 }
 .projets .button {
   margin-top: 3rem;
