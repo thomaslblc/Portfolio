@@ -592,13 +592,18 @@ section {
   position: relative;
   z-index: 3;
   background-color: #ffffff;
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 70%;
   padding: 3rem;
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .projets .projets-content .popupContainer .wrapper .popupContent .popupClose {
-  font-size: 35px;
+  font-size: 26px;
   color: rgba(39, 41, 70, 0.6);
   top: 3rem;
   right: 3rem;
@@ -609,6 +614,36 @@ section {
 }
 .projets .projets-content .popupContainer .wrapper .popupContent .popupClose:hover {
   color: #154c79;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupTitle h3 {
+  margin: 0;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupText {
+  display: flex;
+  flex-direction: column;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupText strong {
+  margin: 1rem 0;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupText strong:first-child {
+  margin-top: 0;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupText a {
+  transition: all 150ms ease-in-out;
+  margin-top: 1rem;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+}
+.projets .projets-content .popupContainer .wrapper .popupContent .popupText a i {
+  margin-right: 10px;
+  font-size: 20px;
 }
 .projets .button {
   margin-top: 3rem;

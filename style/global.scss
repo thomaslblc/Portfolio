@@ -542,13 +542,18 @@ section {
           position: relative;
           z-index: 3;
           background-color: #ffffff;
-          width: 50%;
-          height: 50%;
+          width: 70%;
+          height: 70%;
           padding: $large-value;
           border-radius: $radius;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          overflow: scroll;
+          overflow-x: hidden;
 
           .popupClose {
-            font-size: 35px;
+            font-size: 26px;
             color: rgba($body-color, 0.6);
             top: $large-value;
             right: $large-value;
@@ -559,6 +564,44 @@ section {
 
             &:hover {
               color: rgba($color-1, 1);
+            }
+          }
+
+          .popupTitle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: $large-value;
+        
+            h3 {
+              margin: 0;
+            }
+          }
+
+          .popupText {
+            display: flex;
+            flex-direction: column;
+
+            strong {
+              margin: $small-value 0;
+
+              &:first-child {
+                margin-top: 0;
+              }
+            }
+
+            a {
+              @include transition();
+              margin-top: $small-value;
+              display: flex;
+              width: fit-content;
+              align-items: center;
+
+              i {
+                margin-right: 10px;
+                font-size: 20px;
+              }
+
             }
           }
         }
